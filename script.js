@@ -4,6 +4,9 @@ heroImg.addEventListener("click", () => {
 })
 
 
+
+
+
 // destinations
 
 const destinationsLinks = document.querySelectorAll(".location");
@@ -125,3 +128,7 @@ document.querySelector(".menu").addEventListener("click", () => {
 close.addEventListener("click", () => {
     navMenu.classList.remove("show-nav")
 })
+
+window.onscroll = () => {
+    navMenu.classList.remove("show-nav")
+}
