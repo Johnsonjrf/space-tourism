@@ -673,6 +673,12 @@ p.figure{
     /* left: 0; */
     }
 
+
+    .logo{
+        top: 1rem;
+        left: 1rem;
+    }
+
     .close{
         display: block;
         width: 25px;
@@ -710,6 +716,7 @@ p.figure{
         display: flex;
         flex-direction: column;
         height: 100%;
+        align-items: center;
         
     }
 
@@ -726,23 +733,39 @@ p.figure{
 
     .home-details h2{
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .home-details h1{
         letter-spacing: 10px;
+        text-align: center;
+        font-size: 4rem;
     }
 
     .home-details p{
-        font-size: 1.3rem;
+        font-size: 0.95rem;
         text-align: center;
+    }
+
+    .home-col2 img{
+        width: 200px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        
+    }
+    
+    .home-col2 img.show-bg{
+        width: 280px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 3rem;
+        border-radius: 50%;
     }
 
 
     /* destinations */
 
     .destination{
-        padding: 7rem 2rem 4rem;
+        padding: 5rem 2rem 4rem;
         position: relative;
         /* background-image: url("./assets/destination/background-destination-mobile.jpg"); */
     }
@@ -750,6 +773,7 @@ p.figure{
     .all-destinations{
         width: 100%;
         height: 100%;
+        position: static;
     }
 
     .different-destinations{
@@ -777,8 +801,13 @@ p.figure{
         height: 100%;
     }
 
+    .destination-info h1{
+        font-size: 4rem;
+    }
+
     .destination-info p{
         font-size: 1rem;
+        margin-bottom: 0;
     }
 
     .different-destinations .col.left{
@@ -798,8 +827,9 @@ p.figure{
 
     .destination-stats{
         flex-direction: column;
-        gap: 2rem;
-        justify-self: flex-end;
+        gap: .5rem;
+        justify-self: flex-start;
+        padding: 0;
     }
 
     .destination-stats div{
@@ -807,12 +837,14 @@ p.figure{
     }
 
     .dest-desc{
-        position: unset;
+        position: static;
     }
 
     .dest-desc h1{
         width: 100%;
         text-align: center;
+        /* position: absolute;
+        left: 0; */
     }
 
     .destination-links ul li a{
@@ -821,12 +853,12 @@ p.figure{
 
     .destination-links{
         position: absolute;
-        width: 80%;
+        width: fit-content;
         top: 45%;
-        left: 20%;
-        /* display: flex;
+        left: 15%;
+        display: flex;
         justify-content: center;
-        align-items: center; */
+        align-items: center;
         margin: 0 auto;
         /* transform: translateX(-50%); */
     }
@@ -838,7 +870,7 @@ p.figure{
     }
 
     p.figure{
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     span.distance{
@@ -848,7 +880,7 @@ p.figure{
     /* crew */
     .crew{
         position: relative;
-        padding: 9rem 2rem 5rem 2rem;
+        padding: 7rem 2rem 5rem 2rem;
         background-image: url("./assets/crew/background-crew-mobile.jpg");
     }
 
@@ -898,11 +930,13 @@ p.figure{
     }
 
     p.bg-story{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     h3.job-title{
         margin-top: .5rem;
+        font-size: 1.1rem;
+        
     }
 
     .crew-section-title{
@@ -912,18 +946,21 @@ p.figure{
     }
 
     .crew-name{
-        margin-top: .8rem;
+        margin-top: .3rem;
+        font-size: 1.5rem;
+        margin-bottom: .3rem;
     }
 
     .crew-container{
         position: unset;
     }
 
-    /* tecnology */
+    /* technology */
 
     .technology{
         background-image: url("./assets/technology/background-technology-mobile.jpg");
         padding: 6rem 0 2rem;
+        position: relative;
     }
 
     .switcher{
@@ -947,6 +984,14 @@ p.figure{
         flex-direction: column-reverse;
     }
 
+    .tech-address{
+        top: 3rem;
+        width: 100%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     .tech-details.desc, .tech-details.img{
         width: 100%;
     }
@@ -959,6 +1004,7 @@ p.figure{
         display: block;
         width: 100%;
         object-fit: cover;
+        object-position: center;
     }
 
     .tech-details.desc{
@@ -975,7 +1021,11 @@ p.figure{
     }
 
     .tech-description{
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .tech-name{
+        margin-bottom: 0;
     }
 
     .switcher{
