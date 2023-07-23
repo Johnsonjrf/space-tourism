@@ -26,7 +26,6 @@ html:focus-within {
 html{
     font-size: 16px;
     overflow-x: hidden;
-
 }
 
 /* Set core body defaults */
@@ -119,7 +118,7 @@ span.number{
 }
 
 nav{
-    padding: 1rem 12%;
+    padding: 1.5rem 12%;
     background: rgba(255, 255, 255, 0.05);
 }
 
@@ -138,7 +137,7 @@ nav ul li{
 
 nav ul li a{
     color: #fff;
-    font-size: .7rem;
+    font-size: .8rem;
     cursor: pointer;
     position: relative;
 }
@@ -169,7 +168,7 @@ nav ul li a:hover::after{
 }
 
 .hr{
-    width: min(400px, 40%);
+    width: min(570px, 60%);
     position: absolute;
     left: 12%;
 }
@@ -179,13 +178,14 @@ nav ul li a:hover::after{
     padding: 0;
     height: 0.2px;
     background: rgba(255, 255, 255, 0.3);
+    width: 100%;
 }
 
 /* home */
 
 section{
     height: 100vh;
-    padding: 10rem 12%;
+    padding: 14rem 12% 8rem;
     width: 100%;
 }
 
@@ -199,6 +199,7 @@ section{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 100%;
     
 }
 
@@ -208,10 +209,13 @@ section{
 
 .home-details p{
     color: var(--sub-heading-color);
+    font-size: 1.3rem;
 }
 
 .home-details h2{
     color: var(--sub-heading-color);
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .home-col2{
@@ -223,16 +227,16 @@ section{
 }
 
 .home-col2 img{
-    width: 180px;
+    width: 200px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     
 }
 
-.show-bg{
-    width: 250px;
+.home-col2 img.show-bg{
+    width: 310px;
     background: rgba(255, 255, 255, 0.2);
-    padding: 3rem;
+    padding: 3.5rem;
     border-radius: 50%;
 }
 
@@ -295,7 +299,7 @@ section{
 
 .different-destinations{
     width: 100%;
-    height: 300px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -327,15 +331,46 @@ section{
     margin: 1.5rem 0;
 }
 
+.col.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col.left img{
+    width: 90%;
+}
+
 .destination-info h1{
-    font-size: 4rem;
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.distance{
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+/* .destination-stats div{
+    width: 50%;
+} */
+
+p.figure{
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+}
+
+.destination-info p{
+    font-size: 1.2rem;
 }
 
 .destination-stats{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
+    gap: 3rem;
 }
 
 .destination-stats p{
@@ -349,6 +384,10 @@ section{
 .dest-active{
     display: flex;
 }
+
+/* .location{
+    font-size: 1.9rem;
+} */
 
 .location.active-link{
     position: relative;
@@ -419,40 +458,40 @@ section{
 .job-title{
     margin-bottom: .5rem;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--sub-heading-color);
 }
 
 .crew-name{
     margin-bottom: 1.5rem;
     text-transform: uppercase;
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     line-height: 2rem;
 }
 
 .crew-img img{
     width: 100%;
     height: 100%;
-    font-display: block;
+    display: block;
     object-fit: contain;
 }
 
 .bg-story{
     color: var(--sub-heading-color);
-    font-size: .7rem;
+    font-size: 1.2rem;
 }
 
 .indicator{
     position: absolute;
-    bottom: 10%;
+    bottom: 15%;
     left: 0;
     display: flex;
-    gap: .5rem;
+    gap: 1.3rem;
 }
 
 .indicator span{
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border: 0;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.4);
@@ -477,7 +516,7 @@ section{
     background-image: url("./assets/technology/background-technology-desktop.jpg");
     background-position: center;
     background-size: cover;
-    padding: 5rem 0 2rem 12%; 
+    padding: 9rem 0 5rem 12%; 
     padding-top: 10rem;
     position: relative;
 }
@@ -493,13 +532,13 @@ section{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: .6rem;
+    gap: 1.2rem;
     width: 15%;
 }
 
 .switch{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 1px solid #fff;
     display: flex;
@@ -519,10 +558,11 @@ section{
     display: none;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
 
 .tech-details{
-    width: 45%;
+    width: 40%;
     height: 100%;
 }
 
@@ -530,7 +570,7 @@ section{
     width: 100%;
     display: block;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 }
 
