@@ -1,0 +1,944 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html{
+    font-size: 16px;
+    overflow-x: hidden;
+
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* css global variables */
+
+:root{
+    --pages-link-fs: 1rem;
+    --main-text: 6rem;
+    --sub-heading-text: 2rem;
+    --sub-heading-color: rgba(255, 255, 255, 0.5);
+}
+
+.flex-div{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    scroll-behavior: smooth;
+    color: #fff;
+    overflow: hidden;
+}
+
+span.number{
+    font-size: inherit;
+    color: var(--sub-heading-color);
+}
+
+.alltitle{
+    font-size: 1.3rem;
+}
+
+/* header */
+
+.header{
+    width: 100%;
+    justify-content: flex-end;
+    position: fixed;
+    top: 5%;
+    right: 0;
+    z-index: 100;
+    /* padding-left: 12%; */
+}
+
+.logo{
+    position: absolute;
+    top: .8rem;
+    left: 2rem;
+    width: 30px;
+}
+
+nav{
+    padding: 1rem 12%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    color: #fff;
+}
+
+nav ul li{
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: .7rem;
+    cursor: pointer;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border: 0;
+    outline: 0;
+    background: #fff;
+    bottom: -1.25rem;
+    transition: all 0.5s ease;
+}
+
+.menu{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.hr{
+    width: min(400px, 40%);
+    position: absolute;
+    left: 12%;
+}
+
+.hr hr{
+    border: 0;
+    padding: 0;
+    height: 0.2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* home */
+
+section{
+    height: 100vh;
+    padding: 10rem 12%;
+    width: 100%;
+}
+
+.home{
+    background-image: url("./assets/home/background-home-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.home-sections{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.home-details h1{
+    font-size: var(--main-text);
+ }
+
+.home-details p{
+    color: var(--sub-heading-color);
+}
+
+.home-details h2{
+    color: var(--sub-heading-color);
+}
+
+.home-col2{
+   
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    
+}
+
+.home-col2 img{
+    width: 180px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.show-bg{
+    width: 250px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3rem;
+    border-radius: 50%;
+}
+
+/* destination */
+
+.destination{
+    background-image: url("./assets/destination/background-destination-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 8rem 12%;
+}
+
+.all-destinations{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dest-desc{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.dest-desc h1, .dest-desc nav{
+    width: 40%;
+}
+
+.destination-links{
+    background: transparent;
+    align-self: flex-end;
+    padding: 0;
+    gap: 2rem;
+}
+
+
+
+.destination-links ul li a{
+    color: var(--sub-heading-color);
+    font-size: .6rem;
+    position: relative;
+}
+
+.destination-links ul li a::after{
+    content: "";
+    border: none;
+    outline: none;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.5s ease;
+}
+
+.destination-links ul li a:hover::after{
+    width: 100%;
+}
+
+.different-destinations{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.different-destinations .col{
+    width: 40%;
+}
+
+.sat{
+    width: 100%;
+    display: block;
+    object-fit: contain;
+    height: 100%;
+}
+
+.destination-info p, .destination-stats span{
+    color: var(--sub-heading-color);
+}
+
+.destination-info p{
+    font-size: .7rem;
+}
+
+.col hr{
+    border: 0;
+    padding: 0;
+    height: 0.2px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 1.5rem 0;
+}
+
+.destination-info h1{
+    font-size: 4rem;
+}
+
+.destination-stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.destination-stats p{
+    font-size: 1rem;
+}
+
+.different-destinations{
+    display: none;
+}
+
+.dest-active{
+    display: flex;
+}
+
+.location.active-link{
+    position: relative;
+}
+
+.location.active-link::after{
+    content: "";
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+/* crew */
+
+.crew{
+    background-image: url("./assets/crew/background-crew-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 0 12%;
+    padding-top: 8rem;
+    position: relative;
+    width: 100%;
+   
+   
+}
+
+.crew-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    transition:  all 10s ease;
+}
+
+.crew-section-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.all-crew{
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 1s ease;
+}
+
+.crew-detail, .crew-img{
+    width: 45%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.crew-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.job-title{
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: var(--sub-heading-color);
+}
+
+.crew-name{
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    line-height: 2rem;
+}
+
+.crew-img img{
+    width: 100%;
+    height: 100%;
+    font-display: block;
+    object-fit: contain;
+}
+
+.bg-story{
+    color: var(--sub-heading-color);
+    font-size: .7rem;
+}
+
+.indicator{
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    display: flex;
+    gap: .5rem;
+}
+
+.indicator span{
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    /* padding: 5px; */
+}
+
+.indic{
+    cursor: pointer;
+}
+
+.indic.active-indicator{
+    background: #fff;
+}
+
+.all-crew.active-container{
+    display: flex;
+}
+
+/* technology */
+
+.technology{
+    background-image: url("./assets/technology/background-technology-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 0 2rem 12%; 
+    padding-top: 10rem;
+    position: relative;
+}
+
+.technology-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.switcher{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .6rem;
+    width: 15%;
+}
+
+.switch{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.switch:hover{
+    background: #fff;
+    color: #000;
+}
+
+.technologies{
+    width: 85%;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tech-details{
+    width: 45%;
+    height: 100%;
+}
+
+.tech-details img{
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.tech-details.desc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.tech-sub-hd{
+    color: var(--sub-heading-color);
+    margin-bottom: .3rem;
+}
+
+.tech-name{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.tech-description{
+    color: var(--sub-heading-color);
+}
+
+.technologies.active-tech{
+    display: flex;
+}
+
+.active-switch{
+    background: #fff;
+    color: #000;
+}
+
+.tech-address{
+    position: absolute;
+    top: 7rem;
+    left: 12%;
+}
+
+
+/* responsiveness */
+
+@media screen  and (min-width: 700px){
+    
+}
+
+@media screen and (max-width: 967px) {
+
+    html, body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    /* header */
+
+    .menu{
+        display: block;
+    }
+
+    .page-links{
+        box-sizing: border-box;
+        position: absolute;
+        min-height: 100vh;
+        height: 100vh;
+        z-index: 1000;
+        right: -100%;
+        top: 0;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 3rem;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .show-nav{
+        right: 0;
+    }
+
+    .hr{
+        display: none;
+    }
+
+    .page-links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+    color: #fff;
+    /* position: absolute; */
+    align-items: flex-start;
+    
+    /* left: 0; */
+    }
+
+    .close{
+        display: block;
+        width: 25px;
+        height: 25px;
+        align-self: flex-end;
+    }
+
+    .page-links ul li{
+        text-align: left;
+    }
+
+    .page-links ul li a{
+        color: #fff;
+        font-size: 1.2rem;
+    }
+
+    .header{
+    width: 100%;
+    justify-content: flex-end;
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1rem;
+    /* padding-left: 12%; */
+    }
+
+    /* home */
+    .home{
+        padding: 8rem 2rem 4rem ;
+        background-image: url("./assets/home/background-home-mobile.jpg");
+    }
+    .home-sections{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        
+    }
+
+    .home-col1{
+        height: 60%;
+    }
+
+    .home-col2{
+        height: 40%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .home-details h2{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .home-details h1{
+        letter-spacing: 10px;
+    }
+
+    .home-details p{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+
+    /* destinations */
+
+    .destination{
+        padding: 7rem 2rem 4rem;
+        position: relative;
+        /* background-image: url("./assets/destination/background-destination-mobile.jpg"); */
+    }
+
+    .all-destinations{
+        width: 100%;
+        height: 100%;
+    }
+
+    .different-destinations{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        /* align-items: flex-start; */
+    }
+
+    .different-destinations .col{
+        width: 100%;
+    }
+    
+    .dest-desc{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    .col.left img{
+        width: 60%;
+        height: 100%;
+    }
+
+    .destination-info p{
+        font-size: 1rem;
+    }
+
+    .different-destinations .col.left{
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .different-destinations .col.right{
+        height: 60%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+
+    .destination-stats{
+        flex-direction: column;
+        gap: 2rem;
+        justify-self: flex-end;
+    }
+
+    .destination-stats div{
+        width: 100%;
+    }
+
+    .dest-desc{
+        position: unset;
+    }
+
+    .dest-desc h1{
+        width: 100%;
+        text-align: center;
+    }
+
+    .destination-links ul li a{
+        font-size: 1rem;
+    }
+
+    .destination-links{
+        position: absolute;
+        width: 80%;
+        top: 45%;
+        left: 20%;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        margin: 0 auto;
+        /* transform: translateX(-50%); */
+    }
+
+    .destination-links ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p.figure{
+        font-size: 2rem;
+    }
+
+    span.distance{
+        text-transform: uppercase;
+    }
+
+    /* crew */
+    .crew{
+        position: relative;
+        padding: 9rem 2rem 5rem 2rem;
+        background-image: url("./assets/crew/background-crew-mobile.jpg");
+    }
+
+    .crew-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .all-crew{
+        flex-direction: column-reverse;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .crew-img, .crew-detail{
+        width: 100%;
+        height: 45%;
+    }
+
+    .crew-detail{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .crew-img{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .crew-img img{
+        width: 65%;
+        align-items: flex-end;
+        display: block;
+        object-fit: contain;
+        height: 100%;
+    }
+
+    .indicator{
+        top: 53%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: fit-content;
+    }
+
+    p.bg-story{
+        font-size: 1.3rem;
+    }
+
+    h3.job-title{
+        margin-top: .5rem;
+    }
+
+    .crew-section-title{
+        width: 100%;
+        text-align: center;
+        top: 7%;
+    }
+
+    .crew-name{
+        margin-top: .8rem;
+    }
+
+    .crew-container{
+        position: unset;
+    }
+
+    /* tecnology */
+
+    .technology{
+        background-image: url("./assets/technology/background-technology-mobile.jpg");
+        padding: 6rem 0 2rem;
+    }
+
+    .switcher{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        top: 43%;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 1.5rem;
+
+    }
+    .technology-container{
+        height: 100%;
+        position: unset;
+    }
+
+    .technologies{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .tech-details.desc, .tech-details.img{
+        width: 100%;
+    }
+
+    .tech-details.img{
+        height: 30%;
+    }
+
+    .tech-details.img img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .tech-details.desc{
+        height: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0 2rem;
+    }
+
+    .tech-details.desc h2, .tech-details.desc h1{
+        width: 100%;
+    }
+
+    .tech-description{
+        font-size: 1.1rem;
+    }
+
+    .switcher{
+        
+    }
+}
